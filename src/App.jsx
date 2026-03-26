@@ -62,7 +62,7 @@ export default function App() {
       );
 
       const res = await axios.post(
-        "http://localhost:5000/api/ask-ai",
+        "https://ai-flow-app-backend-futureblinktask-2.onrender.com/api/ask-ai",
         { prompt }
       );
 
@@ -88,7 +88,7 @@ export default function App() {
     try {
       setSaving(true);
 
-      await axios.post("http://localhost:5000/api/save", {
+      await axios.post("https://ai-flow-app-backend-futureblinktask-2.onrender.com/api/save", {
         prompt,
         response: nodes.find((n) => n.id === "2")?.data?.label,
       });
@@ -107,7 +107,7 @@ export default function App() {
 
   const fetchHistory = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/history");
+      const res = await axios.get("https://ai-flow-app-backend-futureblinktask-2.onrender.com/api/history");
       setHistory(res.data);
     } catch (err) {
       console.log(err);
