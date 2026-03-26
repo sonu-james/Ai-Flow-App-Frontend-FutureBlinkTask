@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview",
+    "postinstall": "chmod +x node_modules/.bin/vite"
   },
   "dependencies": {
     "react": "^18.2.0",
